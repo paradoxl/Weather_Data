@@ -1,8 +1,9 @@
 package org.example;
 
+import com.google.gson.GsonBuilder;
+import jdk.jfr.Event;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 
 import java.io.*;
@@ -12,8 +13,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Base64;
-import java.util.Iterator;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args)throws Exception{
@@ -61,28 +63,31 @@ public class Main {
                 System.out.println("invalid path");
             }
 
-//          JSON parser with object
-            JSONParser parser = new JSONParser();
-            Reader reader = new FileReader("/Users/michael.evans/IdeaProjects/Weather/src/main/java/org/example/data.json");
-            Object object = parser.parse(reader);
-            JSONObject jsonObject = (JSONObject) object;
 
-            Integer value = (Integer) jsonObject.get("value");
-            System.out.println("The value im looking for" + " " + value);
-
-
-            //json parser with array.
-
-            JSONObject jsonObject1 = (JSONObject) object;
-            JSONArray array1 = (JSONArray) jsonObject1.get("data");
-            Iterator i = array1.iterator();
-
-            while(i.hasNext()){
-                JSONObject slide = (JSONObject) i.next();
-                Double target = (Double) slide.get("value");
-                System.out.println("Value given arrays" + " " + target + " " + array1);
-
-            }
+            // this portion uses org.simple.json
+////          JSON parser with object
+//            JSONParser parser = new JSONParser();
+//            Reader reader = new FileReader("/Users/michael.evans/IdeaProjects/Weather/src/main/java/org/example/data.json");
+//            Object object = parser.parse(reader);
+//            JSONObject jsonObject = (JSONObject) object;
+//
+//            Integer value = (Integer) jsonObject.get("value");
+//            System.out.println("The value im looking for" + " " + value);
+//
+//
+//            //json parser with array.
+//
+//            JSONObject jsonObject1 = (JSONObject) object;
+//            JSONArray array1 = (JSONArray) jsonObject1.get("data");
+//            Iterator i = array1.iterator();
+//
+//            while(i.hasNext()){
+//                JSONObject slide = (JSONObject) i.next();
+//                Double target = (Double) slide.get("value");
+//                System.out.println("Value given arrays" + " " + target + " " + array1);
+//
+//            }
+            GsonBuilder builder = new GsonBuilder();
 
         }
         }
