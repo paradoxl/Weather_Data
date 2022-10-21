@@ -49,10 +49,6 @@ public class callWeather {
             System.out.println("invalid path");
         }
 
-        System.out.println("testing string" + responseStrBuilder.toString());
-        Gson gson = new Gson();
-        getData data = gson.fromJson(responseStrBuilder.toString(), getData.class);
-        System.out.println(data.getParam());
     }
 }
 

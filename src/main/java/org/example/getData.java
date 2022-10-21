@@ -4,9 +4,9 @@ public class getData {
     private String data;
 
     public getData(String parameter){
-        this.parameter = parameter;
+        this.data = parameter;
     }
     public String getParam(){
-        return this.parameter;
+        return this.data;
     }
 }
