@@ -16,7 +16,7 @@ public class callWeather {
         String username = "student_evans";
         String password = "0xAD5bdm6R";
         System.out.print("username: " + username + ", password: " + password + "\n");
-        URL url = new URL("https://api.meteomatics.com/2022-10-20T00:00:00Z/t_2m:F/40.479961,-104.907677/json?model=mix");
+        URL url = new URL("https://api.meteomatics.com/2022-10-20T00:00:00Z/t_2m:F/40.479961,-104.907677/json");
         String encoding = Base64.getEncoder().encodeToString((username + ":" + password).getBytes(StandardCharsets.UTF_8));
 
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -37,7 +37,7 @@ public class callWeather {
         while ((inputStr = streamReader.readLine()) != null) {
             responseStrBuilder.append(inputStr);
         }
-        System.out.print(responseStrBuilder);
+        System.out.println(responseStrBuilder);
 
 
         Path path = Paths.get("/Users/michael.evans/IdeaProjects/Weather/src/main/java/org/example/data.json");
