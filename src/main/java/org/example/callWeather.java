@@ -1,5 +1,7 @@
 package org.example;
 
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -47,7 +49,10 @@ public class callWeather {
             System.out.println("invalid path");
         }
 
-
+        System.out.println("testing string" + responseStrBuilder.toString());
+        Gson gson = new Gson();
+        getData data = gson.fromJson(responseStrBuilder.toString(), getData.class);
+        System.out.println(data.getParam());
     }
 }
 
