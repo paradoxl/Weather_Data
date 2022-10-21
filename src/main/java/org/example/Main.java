@@ -1,6 +1,6 @@
 package org.example;
 
-import com.google.gson.GsonBuilder;
+import com.google.gson.*;
 import jdk.jfr.Event;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,6 +16,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args)throws Exception{
@@ -53,7 +54,7 @@ public class Main {
                 responseStrBuilder.append(inputStr);
             }
 
-            System.out.print(responseStrBuilder);
+//            System.out.print(responseStrBuilder);
 
 
             Path path = Paths.get("/Users/michael.evans/IdeaProjects/Weather/src/main/java/org/example/data.json");
@@ -65,9 +66,9 @@ public class Main {
 
 
             // this portion uses org.simple.json
-////          JSON parser with object
+//         JSON parser with object
 //            JSONParser parser = new JSONParser();
-//            Reader reader = new FileReader("/Users/michael.evans/IdeaProjects/Weather/src/main/java/org/example/data.json");
+            Reader reader = new FileReader("/Users/michael.evans/IdeaProjects/Weather/src/main/java/org/example/data.json");
 //            Object object = parser.parse(reader);
 //            JSONObject jsonObject = (JSONObject) object;
 //
@@ -87,7 +88,10 @@ public class Main {
 //                System.out.println("Value given arrays" + " " + target + " " + array1);
 //
 //            }
-            GsonBuilder builder = new GsonBuilder();
+            Gson gson = new Gson();
+           Spike spike = gson.fromJson(reader,Spike.class);
+           System.out.println(spike.getParam());
+
 
         }
         }
