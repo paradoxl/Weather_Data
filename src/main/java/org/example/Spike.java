@@ -20,11 +20,21 @@ public class Spike {
             Map<?, ?> map = gson.fromJson(reader, Map.class);
 
             // print map entries
-            for (Map.Entry<?, ?> entry : map.entrySet()) {
-                System.out.println(entry.getKey() + "=" + entry.getValue());
+//            for (Map.Entry<?, ?> entry : map.entrySet()) {
+//                System.out.println(entry.getKey() + "=" + entry.getValue());
+//
+//            }
 
-            }
-            System.out.println(map.get("data"));
+            String data = map.get("data").toString();
+
+
+            System.out.println(data);
+            System.out.println(data.length());
+            System.out.println(data.indexOf("value"));
+            System.out.println(data.substring(101, data.length() -6));
+            String temp = data.substring(101, data.length() -6);
+            System.out.println(temp);
+
 
             // close reader
             reader.close();

@@ -10,10 +10,10 @@ public class Main {
 
 
         weather.getData();
-        System.out.println("data incoming");
-        parser.read();
-
-        System.out.println(values.getValue());
+//        System.out.println("data incoming");
+//        parser.read();
+//
+//        System.out.println(values.getValue());
 
         test.spike();
 

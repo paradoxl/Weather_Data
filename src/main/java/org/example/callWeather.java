@@ -39,7 +39,7 @@ public class callWeather {
         while ((inputStr = streamReader.readLine()) != null) {
             responseStrBuilder.append(inputStr);
         }
-        System.out.println(responseStrBuilder);
+//        System.out.println(responseStrBuilder);
 
 
         Path path = Paths.get("/Users/michael.evans/IdeaProjects/Weather/src/main/java/org/example/data.json");
