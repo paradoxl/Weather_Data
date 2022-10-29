@@ -27,12 +27,7 @@ public class Spike {
 
             String data = map.get("data").toString();
 
-
-            System.out.println(data);
-            System.out.println(data.length());
-            System.out.println(data.indexOf("value"));
-            System.out.println(data.substring(101, data.length() -6));
-            String temp = data.substring(101, data.length() -6);
+            String temp = data.substring(data.indexOf("value")+6, data.length() -6);
             System.out.println(temp);
 
 
