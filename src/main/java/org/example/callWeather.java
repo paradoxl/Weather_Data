@@ -28,7 +28,7 @@ public class callWeather {
         String location = "37.043594,-95.658791/";
         String format = "json";
 
-
+//fc
         String date = String.valueOf(LocalDateTime.now());
         System.out.println("date"+date);
         //api example
