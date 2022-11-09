@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SnowShoes">
+    <output-path>$PROJECT_DIR$/out/artifacts/SnowShoes</output-path>
+    <root id="archive" name="SnowShoes.jar">
+      <element id="module-output" name="Weather" />
+      <element id="file-copy" path="$USER_HOME$/Documents/jarFiles/java-json.jar" />
+      <element id="file-copy" path="$USER_HOME$/Documents/jarFiles/json-20131018.jar" />
+      <element id="file-copy" path="$USER_HOME$/Documents/jarFiles/json-simple-1.1.1.jar" />
+      <element id="library" level="project" name="google.code.gson" />
+      <element id="library" level="project" name="twilio.sd" />
+    </root>
+  </artifact>
+</component>
