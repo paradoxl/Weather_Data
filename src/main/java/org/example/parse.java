@@ -13,6 +13,7 @@ import java.net.URISyntaxException;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
+import io.github.cdimascio.dotenv.Dotenv;
 
 public class parse {
 
@@ -41,10 +42,10 @@ public class parse {
 
 
          final String ACCOUNT_SID = "ACd3bcadd06e50f84a2cbbeff5bab5bf26";
-         final String AUTH_TOKEN = "e56d0287ceb2cbced5b73f91dac8a0b9";
 
+            Dotenv dotenv = Dotenv.load();
 
-            Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+            Twilio.init(ACCOUNT_SID, dotenv.get("twillioAuth"));
 
             Message message = Message.creator(new PhoneNumber("+19797773910"),
                     new PhoneNumber("+19789042343"),

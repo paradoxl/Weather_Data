@@ -16,12 +16,14 @@ public class Main {
         System.out.println(time2);
         Boolean running = true;
         weather.getData();
+        System.out.println(time + "time one");
+        System.out.println(time2 + "time two");
         while (running == true) {
-            if (Objects.equals(time, time2)) {
+//            if (Objects.equals(time, time2)) {
                 weather.getData();
                 System.out.println("running");
                 test.spike();
-            }
+//            }
 
 
             for (int i = 0; i < 20; i++) {
